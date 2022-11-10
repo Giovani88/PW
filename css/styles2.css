@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: #E9E3D6;
+  font-family: 'Montserrat';
+}
+
+.menu{
+  background-color: #386641;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.menu_logo{
+  width: 8%;
+  height: 8%;
+  padding: 10px;
+
+}
+.menu_titulo{
+  color: white;
+}
+.shope{
+  width: 160px;
+  height: 160px;
+}
+
+.menu_pestañas{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+}
+.menu_pestañas ul {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  position: relative;
+}
+.menu_pestañas li {
+    display: inline-block;
+    padding: 10px;
+}
+
+.menu_pestañas ul li a {
+  text-decoration: none;
+  color: #E9E3D6;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.menu_pestañasv ul li a:hover::before {
+  width: 100%;
+}

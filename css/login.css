@@ -1,0 +1,149 @@
+
+
+html{        
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #E9E3D6;
+}
+
+.contenedor-login{
+  width:100%;
+  height: 31rem;
+  text-align: center; 
+  justify-content: center;
+  margin:1.6rem 0;
+}
+
+.login{
+    background-color: rgb(243, 243, 243);
+    width: 30rem;
+    height: 30.7rem;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 0px auto;
+    margin-top: .5;
+    
+}
+
+img{
+    width: 4rem;
+}
+.login__bienvenido{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+
+label{
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.login__btn{
+    margin-top: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn{
+    background-color: #386641;
+    color: white;
+    border-style: none;
+    width: 15rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    -webkit-box-shadow: 3px 8px 19px 3px rgba(0,0,0,0.3); 
+    box-shadow: 3px 8px 19px 3px rgba(0,0,0,0.3);
+}
+
+.btn:active{
+ transform: translateY(3px);
+}
+
+
+.login__registro{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+h2, a{
+    font-size: 1rem;    
+}
+a{
+    text-decoration: none;
+    margin-left: 5px;
+    color: rgb(11, 159, 142);
+}
+
+h1{
+    font-size: 2.4rem;
+}
+
+.login__forget{
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+}
+
+/* stylos de los inputs */
+.input-pass, .input-email {
+  width: 20rem;
+  height: 2.5rem;
+  margin-bottom: 2rem;
+  line-height: 28px;
+  border: 2px solid transparent;
+  border-bottom-color: #777;
+  padding: .2rem 0;
+  outline: none;
+  background-color: transparent;
+  color: #0d0c22;
+  transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.input-pass input:focus, input:hover {
+  outline: none;
+  height: 2.5rem;
+  padding: .2rem 1rem;
+  border-radius: .5rem;
+  border-color: #7ac692;
+}
+
+.input-pass  input::placeholder {
+ color: #777;
+}
+
+.input-pass input:focus::placeholder {
+ opacity: 0;
+ transition: opacity .3s;
+}
+
+.input-email input:focus, input:hover {
+  outline: none;
+  height: 2.5rem;
+  padding: .2rem 1rem;
+  border-radius: .5rem;
+  border-color: #7ac692;
+}
+
+.input-email  input::placeholder {
+ color: #777;
+}
+
+.input-email input:focus::placeholder {
+ opacity: 0;
+ transition: opacity .3s;
+}
