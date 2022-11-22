@@ -8,7 +8,7 @@ body{
     font-family: sans-serif;
 }
 
-
+/* estilos del slider */
 .section-container{
     max-width: 1550px;
     margin: 0 auto;
@@ -208,6 +208,65 @@ html{
     }
 }
 
+/* fin de los estilos del slider */
+
+/* estilos de las categorias */
+.contenedor-categorias{
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
+
+.categorias{
+  width: 100%;
+  height: 11rem;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.categoria{
+  width: 10rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 1rem;
+
+}
+
+.categoria:hover{
+  transform: translateY(-8px);
+}
+
+.circulo{
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  margin: 0 auto;
+  text-align: center;
+  object-fit: fill;
+}
+
+a{
+  text-decoration: none;
+  outline: none;
+  color: #000;
+}
+
+.circulo-img{
+  width: 90%;
+  height: 90%;
+  
+}
+
+.titulo-categorias{
+  text-align: center;
+}
+
+
+
+/*esilos del contenedor de las artesanias que mas te gusten*/
 .contenedor{
     display: flex;
     flex-direction: column;
@@ -219,6 +278,7 @@ html{
 .contenedor__productos{
     width: 100%;
     display: flex;
+    
 
 }
 .contenedor__producto{
@@ -315,7 +375,6 @@ html{
 }
 
 .titulo{
-    margin-top: 2rem;
     font-family: 'Roboto', sans-serif;
     font-size: 32px;
     font-weight: 300;
