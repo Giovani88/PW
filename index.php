@@ -27,20 +27,19 @@
     <div class="contenedor-titulo">
       <h1 class="titulo" >Categorias</h1>
     </div>
-
     <div class="categorias">
-      <a href="login.php">
+      <a href="login.html">
         <div class="categoria">
           <div class="circulo">
-            <img class="circulo-img" src="./img/categorias/craneo.gif" alt="">
+            <img class="circulo-img" src="./img/categorias/catrinas.png" alt="">
           </div>
           <div class="titulo-categoria">
-            <h2 class="titulo-categorias">Calaberitas</h2>
+            <h2 class="titulo-categorias">Catrina</h2>
           </div>
         </div>
       </a>
 
-      <a href="login.php">
+      <a href="login.html">
         <div class="categoria">
           <div class="circulo">
             <img class="circulo-img" src="./img/categorias/camisa.png" alt="">
@@ -51,7 +50,7 @@
         </div>
       </a>
 
-      <a href="login.php">
+      <a href="login.html">
         <div class="categoria">
           <div class="circulo">
             <img class="circulo-img" src="./img/categorias/alebrijes.png" alt="">
@@ -62,13 +61,46 @@
         </div>
       </a>
 
-      <a href="login.php">
+      <a href="login.html">
         <div class="categoria">
           <div class="circulo">
             <img class="circulo-img" src="./img/categorias/juguetes.png" alt="">
           </div>
           <div class="titulo-categoria">
             <h2 class="titulo-categorias">Juguetes</h2>
+          </div>
+        </div>
+      </a>
+
+      <a href="login.html">
+        <div class="categoria">
+          <div class="circulo">
+            <img class="circulo-img" src="./img/categorias/jarron.png" alt="">
+          </div>
+          <div class="titulo-categoria">
+            <h2 class="titulo-categorias">Jarrones</h2>
+          </div>
+        </div>
+      </a>
+
+      <a href="login.html">
+        <div class="categoria">
+          <div class="circulo">
+            <img class="circulo-img" src="./img/categorias/joyeria.png" alt="">
+          </div>
+          <div class="titulo-categoria">
+            <h2 class="titulo-categorias">Joyeria</h2>
+          </div>
+        </div>
+      </a>
+
+      <a href="login.html">
+        <div class="categoria">
+          <div class="circulo">
+            <img class="circulo-img" src="./img/categorias/vajillas.png" alt="">
+          </div>
+          <div class="titulo-categoria">
+            <h2 class="titulo-categorias">Vajillas</h2>
           </div>
         </div>
       </a>
