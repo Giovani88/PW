@@ -63,3 +63,7 @@ body{
 .menu_pestañasv ul li a:hover::before {
   width: 100%;
 }
+
+.hola{
+    display: none;
+}

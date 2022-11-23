@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE php>
+<php lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,24 +8,13 @@
   <link rel="stylesheet" href="./css/styles2.css">
   <script defer src="java.js"></script>
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/alert.css">
 </head>
 
 <body>
-
-  <div class="menu">
-      <img class="menu_logo" src="./img/logo.png" alt="">
-      <h1 class="menu_titulo">Yila’ob</h1>
-      <div class="menu_pestañas">
-        <ul>           
-          <li> <a href="">Nosotros</a> </li>
-          <li> <a href="">Artesanos</a> </li>
-          <li> <a href="">Artesanias</a> </li>
-          <li> <a href="login.html" target="_blank">Iniciar Sesion</a> </li>
-          <li> <img calass="shope" src="./img/shope.png" alt=""> </li>
-        </ul>
-      </div>
-  </div>
-  
+<?php
+  include("nav.php");
+?>
   <section class="section">
       <div class="section-container">         
       <div class="slider-container"></div>
@@ -38,8 +27,9 @@
     <div class="contenedor-titulo">
       <h1 class="titulo" >Categorias</h1>
     </div>
+
     <div class="categorias">
-      <a href="login.html">
+      <a href="login.php">
         <div class="categoria">
           <div class="circulo">
             <img class="circulo-img" src="./img/categorias/craneo.gif" alt="">
@@ -50,7 +40,7 @@
         </div>
       </a>
 
-      <a href="login.html">
+      <a href="login.php">
         <div class="categoria">
           <div class="circulo">
             <img class="circulo-img" src="./img/categorias/camisa.png" alt="">
@@ -61,7 +51,7 @@
         </div>
       </a>
 
-      <a href="login.html">
+      <a href="login.php">
         <div class="categoria">
           <div class="circulo">
             <img class="circulo-img" src="./img/categorias/alebrijes.png" alt="">
@@ -72,7 +62,7 @@
         </div>
       </a>
 
-      <a href="login.html">
+      <a href="login.php">
         <div class="categoria">
           <div class="circulo">
             <img class="circulo-img" src="./img/categorias/juguetes.png" alt="">
@@ -216,26 +206,9 @@
      
   </div>
   </div>
-  <footer>
-    <div class="sociales">
-      <div class="face-content">
-         <img src="./img/face.png" alt="">
-         <a href="#" class="facebook">  Yila'ob </a>
-      </div>
-      <div class="face-content">
-         <img src="./img/instagram.png" alt="">
-         <a href="#" class="instagram">  Yila'ob </a>
-      </div>
-      <div class="face-content">
-         <img src="./img/email.png" alt="">
-         <a href="#" class="email">  yila.ob@gmail.com </a>
-      </div>
-      <div class="face-content">
-         <img src="./img/whatss.png" alt="">
-         <a href="#" class="whatss">  5540413229 </a>
-      </div>
-    </div>
-  </footer>
+<?php
+  include("footer.php");
+?>
 
 </body>
-</html>
+</php>

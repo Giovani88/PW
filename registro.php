@@ -11,24 +11,9 @@
 </head>
 
 <body class="body-registro">
-
-  <div class="menu">
-      <img class="menu_logo" src="./img/logo.png" alt="">
-      <h1 class="menu_titulo">Yila’ob</h1>
-      <div class="menu_pestañas">
-        <ul>           
-          <li> <a href="">Nosotros</a> </li>
-          <li> <a href="">Artesanos</a> </li>
-          <li> <a href="">Artesanias</a> </li>
-          <li> <a href="login.html">Iniciar Sesion</a> </li>
-          <li> <img calass="shope" src="./img/shope.png" alt=""> </li>
-        </ul>
-      </div>
-  </div>
-
-
-
-
+<?php
+  include("nav.php");
+?>
   <div class="contenedor-registro"> 
       <div class="contenedor-formulario">
         <div class="item1">
@@ -69,26 +54,9 @@
 
 
 
-  <footer>
-    <div class="sociales">
-      <div class="face-content">
-         <img src="./img/face.png" alt="">
-         <a href="#" class="facebook">  Yila'ob </a>
-      </div>
-      <div class="face-content">
-         <img src="./img/instagram.png" alt="">
-         <a href="#" class="instagram">  Yila'ob </a>
-      </div>
-      <div class="face-content">
-         <img src="./img/email.png" alt="">
-         <a href="#" class="email">  yila.ob@gmail.com </a>
-      </div>
-      <div class="face-content">
-         <img src="./img/whatss.png" alt="">
-         <a href="#" class="whatss">  5540413229 </a>
-      </div>
-    </div>
-  </footer>
+  <?php
+  include("footer.php");
+?>
   
 </body>
 </html>
