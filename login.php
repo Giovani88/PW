@@ -10,6 +10,7 @@ include("conexion.php");
     <title>Yila'ob</title>
     <link rel="stylesheet" href="./css/alert.css">
     <link rel="stylesheet" href="css/login.css">
+
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/styles2.css">
     <script defer src="alert.js"></script>
@@ -19,34 +20,19 @@ include("conexion.php");
 </head>
 <body>
 
-  <div class="menu">
-      <img class="menu_logo" src="./img/logo.png" alt="">
-      <h1 class="menu_titulo">Yila’ob</h1>
-      <div class="menu_pestañas">
-        <ul>           
-          <li> <a href="">Nosotros</a> </li>
-          <li> <a href="">Artesanos</a> </li>
-          <li> <a href="">Artesanias</a> </li>
-          <li> <a href="login.html" target="_blank">Iniciar Sesion</a> </li>
-          <li> <img calass="shope" src="./img/shope.png" alt=""> </li>
-        </ul>
-      </div>
-  </div>
-
-
   <div class="contenedor-login">
 
      <div class="login">
         <div class="login__bienvenido">
-            <h1>Bienvenido</h1>
-            <img src="img/logo.png" alt="logo">
+            <h1 class="h1-r">Bienvenido</h1>
+            <img class="login__img" src="img/logo.png" alt="logo">
        
         </div>
 <?php
 if(isset($_POST['enviar'])){
   require 'conexion.php';
     $correo = $_POST['email'];
-    $password=$_POST['password'];
+    $password=sha1($_POST['password']);
 
     $query = "SELECT * FROM usuarios WHERE correo='$correo' AND contraseña='$password'";
     

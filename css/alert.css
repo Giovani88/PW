@@ -20,3 +20,9 @@
 .closebtn:hover {
     color: black;
 }
+.ocultar{
+    display: none;
+}
+.mostar{
+    display: inline ;
+}
