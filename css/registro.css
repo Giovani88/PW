@@ -4,7 +4,10 @@
 .item4{grid-area: btns;}
 
 
-
+.btn-cancelar{
+  display: flex;
+  height: 100%;
+}
 .contenedor-registro{
   width:100%;
   height: auto;

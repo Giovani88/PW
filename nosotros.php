@@ -27,7 +27,7 @@
       <img class="img1" src="img/nosotros/img1.jpg" alt="">
     </div>
     <div class="item-img2">
-      <img class="img1" src="img/nosotros/img2.jpg" alt="">
+       <img class="img1" src="img/nosotros/img2.jpg" alt="">
     </div>
     <div class="item-valores">
       <h1>Valores </h1>
