@@ -1,5 +1,6 @@
 <?php
 include("conexion.php");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,16 +34,16 @@ if(isset($_POST['enviar'])){
   require 'conexion.php';
     $correo = $_POST['email'];
     $password=sha1($_POST['password']);
-
     $query = "SELECT * FROM usuarios WHERE correo='$correo' AND contraseña='$password'";
     
 
 	$consulta = mysqli_query($con,$query);
 	if(mysqli_num_rows($consulta)!=0){//Si encontro el usuario		
+        session_start();    
         $row = mysqli_fetch_assoc($consulta);
         $nombre = $row['nombre'];
-
-        
+        $_SESSION['username']=$correo;        
+        $_SESSION['id']= $row["id_usuario"];        
         header("location: index.php");
 
 	}else{
