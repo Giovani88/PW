@@ -231,7 +231,7 @@ html{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 1rem;
+  margin: 0 .5rem;
 
 }
 

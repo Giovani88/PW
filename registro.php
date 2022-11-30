@@ -18,6 +18,7 @@
   include("nav.php");
 ?>
 <?php
+
 if(isset($_POST['enviar'])){
   require 'conexion.php';
     $nombre = $_POST['nombre'];

@@ -222,19 +222,44 @@
         </div>
         
       </div>
+
       <div class="contenedor__producto">
         <div class="contenedor__imagen--artesano">
             <img src="./img/artesano3.png" alt="Producto">
         </div>
         <div class="contenedor__desc">
             <p id="nombre">Irene Aguilar Alcántara</p>
-           
         </div>
         <div class="contenedor__btn">
             <button>Conocer más</button>
         </div>
-        
       </div>
+
+      <div class="contenedor__producto">
+        <div class="contenedor__imagen--artesano">
+            <img src="./img/artesano3.png" alt="Producto">
+        </div>
+        <div class="contenedor__desc">
+            <p id="nombre">Irene Aguilar Alcántara</p>
+        </div>
+        <div class="contenedor__btn">
+            <button>Conocer más</button>
+        </div>
+      </div>
+
+      <div class="contenedor__producto">
+        <div class="contenedor__imagen--artesano">
+            <img src="./img/artesano3.png" alt="Producto">
+        </div>
+        <div class="contenedor__desc">
+            <p id="nombre">Irene Aguilar Alcántara</p>
+        </div>
+        <div class="contenedor__btn">
+            <button>Conocer más</button>
+        </div>
+      </div>
+
+
      
   </div>
   </div>
