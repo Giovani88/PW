@@ -113,17 +113,19 @@
     <div class="contenedor__productos">
 
       <div class="contenedor__producto">
-        <div class="contenedor__imagen">
+        <a href="producto.php">
+          <div class="contenedor__imagen">
             <img src="./img/guanengo.png" alt="Producto">
-        </div>
-        <div class="contenedor__desc">
-            <p id="desc">Guanengo</p>
-            <p id="precio">$1,500.07</p>
-        </div>
+          </div>
+        </a>
+          <div class="contenedor__desc">
+              <p id="desc">Guanengo</p>
+              <p id="precio">$1,500.07</p>
+          </div>
+        
         <div class="contenedor__btn">
             <button>Agregar al carrito</button>
-        </div>
-        
+        </div>     
       </div>
       <div class="contenedor__producto">
         <div class="contenedor__imagen">
@@ -139,13 +141,14 @@
         
       </div>
       <div class="contenedor__producto">
-        <div class="contenedor__imagen">
-            <img src="./img/catrina.png" alt="Producto">
-        </div>
-        <div class="contenedor__desc">
-            <p id="desc">Catrina con calabazas</p>
-            <p id="precio">$1,221.07</p>
-        </div>
+
+          <div class="contenedor__imagen">
+              <img src="./img/catrina.png" alt="Producto">
+          </div>
+          <div class="contenedor__desc">
+              <p id="desc">Catrina con calabazas</p>
+              <p id="precio">$1,221.07</p>
+          </div>
         <div class="contenedor__btn">
             <button>Agregar al carrito</button>
         </div>
@@ -221,19 +224,44 @@
         </div>
         
       </div>
+
       <div class="contenedor__producto">
         <div class="contenedor__imagen--artesano">
             <img src="./img/artesano3.png" alt="Producto">
         </div>
         <div class="contenedor__desc">
             <p id="nombre">Irene Aguilar Alcántara</p>
-           
         </div>
         <div class="contenedor__btn">
             <button>Conocer más</button>
         </div>
-        
       </div>
+
+      <div class="contenedor__producto">
+        <div class="contenedor__imagen--artesano">
+            <img src="./img/artesano3.png" alt="Producto">
+        </div>
+        <div class="contenedor__desc">
+            <p id="nombre">Irene Aguilar Alcántara</p>
+        </div>
+        <div class="contenedor__btn">
+            <button>Conocer más</button>
+        </div>
+      </div>
+
+      <div class="contenedor__producto">
+        <div class="contenedor__imagen--artesano">
+            <img src="./img/artesano3.png" alt="Producto">
+        </div>
+        <div class="contenedor__desc">
+            <p id="nombre">Irene Aguilar Alcántara</p>
+        </div>
+        <div class="contenedor__btn">
+            <button>Conocer más</button>
+        </div>
+      </div>
+
+
      
   </div>
   </div>

@@ -217,6 +217,10 @@ html{
   padding: 10px;
 }
 
+a{
+  text-decoration: none;
+}
+
 .categorias{
   width: 100%;
   height: 11rem;
@@ -231,7 +235,7 @@ html{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 1rem;
+  margin: 0 .5rem;
 
 }
 
