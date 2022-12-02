@@ -19,7 +19,7 @@ include("conexion.php");
   include("nav.php");
     ?>
 </head>
-<body>
+<body class="back-img">
 
   <div class="contenedor-login">
 
