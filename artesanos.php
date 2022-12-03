@@ -7,7 +7,7 @@
     <title>Yilaob</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/artesanos.css">
-    <script defer src="java.js"></script>
+    <script defer src="js/java.js"></script>
 
   <link rel="stylesheet" href="./css/alert.css">
 </head>
