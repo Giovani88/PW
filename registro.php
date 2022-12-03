@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/styles2.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="./css/alert.css">
-  <script defer src="alert.js"></script>
+  <script defer src="js/alert.js"></script>
   
   <title>Registrate</title>
 </head>
