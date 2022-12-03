@@ -17,34 +17,47 @@
 <div class="contenedor-nosotros">
   <div class="contenedor-grid">
     <div class="item-historia">
-      <h2 style="margin-top: 2rem;">Guanengo</h2>
+      <h2 class="desc-titule">Guanengo</h2>
 
-      <p style="margin-top: 2rem;">Descripción:
+      <p class="descripcion" style="margin-top: 2rem;">Descripción:
         <br>
         <br>
-        El huanengo es una blusa típica indígena de Michoacán, México. Es blanca y tiene tiene bordados brillantes. Esta palabra viene de una palabra tarasca (lengua hablada por los purépechas), uanenju que significa blusa.
+      </p>
+      <p class="desc-producto">
+                El huanengo es una blusa típica indígena de Michoacán, México. Es blanca y tiene tiene bordados brillantes. Esta palabra viene de una palabra tarasca (lengua hablada por los purépechas), uanenju que significa blusa.
       </p>
       <br>
       <br>
 
-      <p>Precio: $1500.00 Mx</p>
+      <p class="desc-product">Creado por: <strong>Irene Aguilar Alcántara</strong> </p>
       <br>
       <br>
 
-      <p>Tallas: 32, 34, 36</p>
+      <p class="desc-precio">Precio: $280.00 Mx</p>
       <br>
       <br>
-      Cantidad: <input type="text" placeholder="cantidad">
+
+      <label for="lang">Elige tu talla: </label>
+      <select name="lenguajes" id="lang">
+          <option value="javascript">32</option>
+          <option value="php">34</option>
+          <option value="java">36</option>
+          <option value="golang">37</option>
+        </select>
+            
+
 
       <br>
       <br>
-      <input type="button" value="Comprar">
+      Cantidad: <input type="number" value="1" step="1" >
+
+      <br>
+      <br>
+      <button class="bnt-añadir">Añadir al carrito</button>
 
       
     </div>
     <div class="item-img1">
-
-
       <div class="contenedor-img">
         <img class="cont-img" src="./img/guanengo.png" alt="">
       </div>
