@@ -14,9 +14,6 @@
 <?php
   include("nav.php");
 ?>
-
-
-
 <div class="contenedor-nosotros">
   <div class="contenedor-grid">
     <div class="item-historia">

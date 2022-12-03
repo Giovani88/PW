@@ -6,6 +6,9 @@
 }
 body{
     font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* estilos del slider */
@@ -387,6 +390,7 @@ a{
 footer{
     min-width: 100vh;
     background: #386641;
+    margin-top: auto;
   }
   
   footer .sociales{
