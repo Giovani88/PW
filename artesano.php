@@ -47,10 +47,11 @@
                     <img class="artesano__img--img" src="./img/artesanos/<?php echo $imagen;?>" alt="">
                 </div>
                 <div class="artesano__desc">
+                    <h2 class="subtitulo">Historia</h2>
                     <p class="parrafo"><b>Originario de:</b> <?php echo $origen;?></p>
-                    <p class="parrafo"><b>Edad:</b> <?php echo $edad;?></p>
+                    <p class="parrafo"><b>Edad:</b> <?php echo $edad;?> Años</p>
                     <p class="parrafo"><b>Historia:</b> <?php echo $historia;?></p>
-                    
+                    <h2 class="subtitulo">Contacto</h2>
                     <p class="parrafo"><b>Telefono:</b> <?php echo $telefono;?></p>
                     <p class="parrafo"><b>Correo:</b> <?php echo $correo;?></p>
                 </div>
