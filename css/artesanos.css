@@ -26,6 +26,10 @@
     max-width: 13rem;
     min-width: 12rem;
 }
+.contenedor__artesano:hover{
+    transform: translateY(-8px);
+    transition-duration: 0.3s;
+}
 
 .contenedor__imagen--artesano img{
     width: 100%;

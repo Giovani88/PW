@@ -7,6 +7,24 @@
     <title>Document</title>
 </head>
 <body>
+    <?php include('nav.php');?>
+    <?php 
+      require 'DBManager.php';
+      $artesanias = json_decode(artesanias());
+
+      ?>
+<?php foreach($artesanias as $artesania) { ?>
+      <form action="agregarCarrito.php" method="POST">
+        <input type="hidden" name="id_artesania" value="<?php echo $artesania->id_artesania?>">
+        <p>
+          <?php echo $artesania->nombre?>
+       </p> 
+       <button> Agregar</button>    
+      </form> 
+
+
+<?php } ?>
+      
     
 </body>
 </html>

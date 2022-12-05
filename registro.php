@@ -36,16 +36,15 @@ if(isset($_POST['enviar'])){
     }   
 }
 ?>
-
+      <div id="alert" class='alert ocultar'>
+       <span class='closebtn'>&times;</span>
+       <center>Las Contraseñas No Coinciden</center>
+     </div>
   <form class="contenedor-registro" action="" method="post" onsubmit="return verificarPasswords();" > 
       <div class="contenedor-formulario">
         <div class="item1">
           <h1 class="h1-r">Registro</h1>
         </div>
-        <div id="alert" class='alert ocultar'>
-       <span class='closebtn'>&times;</span>
-       Las Contraseñas No Coinciden
-     </div>
         <div class="item2">
           <input placeholder="Nombre" type="text" name="nombre" class="input" required><br>
           <input placeholder="Apellidos" type="text" name="apellidos" class="input" required><br>
