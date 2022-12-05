@@ -259,14 +259,12 @@
         <div class="contenedor__btn">
             <button>Conocer más</button>
         </div>
-      </div>
-
-
-     
+      </div>     
   </div>
   </div>
 <?php
   include("footer.php");
+
 ?>
 
 </body>

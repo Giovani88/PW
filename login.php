@@ -14,7 +14,7 @@ include("conexion.php");
 
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/styles2.css">
-    <script defer src="alert.js"></script>
+    <script defer src="js/alert.js"></script>
     <?php
   include("nav.php");
     ?>

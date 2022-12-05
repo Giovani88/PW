@@ -11,6 +11,9 @@ const sliderDb = [
     title:"Pasa horas de diversión",
     src:"./img/image2.png"
   },
-
+  {
+    src:"./img/artesanos/artesano2.jpg"
+    
+  },
 ]
 

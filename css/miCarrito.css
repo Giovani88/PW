@@ -1,0 +1,44 @@
+.btn{
+    background: 0;
+    border: 0;
+}
+.fi{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.contenedor{
+    display: flex;
+    min-height: 50vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* .tabla{
+    display: flex;
+    width: 20rem;
+    background-color: #FFFFFF;
+} */
+/*Estilos a la tabla*/
+table.unstyledTable {
+    width: fit-content;
+    text-align: center;
+    border-collapse: collapse;
+    background-color: #FFFFFF;
+  }
+  table.unstyledTable td, table.unstyledTable th {
+
+    padding: 6px 1.8rem;
+  }
+  table.unstyledTable thead {
+    background: #54994E;
+  }
+  table.unstyledTable thead th {
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+  }
+  #svg_1{
+    width: 50px;
+  }

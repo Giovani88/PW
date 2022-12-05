@@ -14,7 +14,7 @@
           <li> <a href="index.php" target="_self">Inicio</a> </li>
           <li> <a href="nosotros.php" target="_self">Nosotros</a> </li>
           <li> <a href="artesanos.php" target="_self">Artesanos</a> </li>
-          <li> <a href="">Artesanias</a> </li>
+          <li> <a href="artesanias.php">Artesanias</a> </li>
           <?php 
      
         
@@ -26,7 +26,7 @@
             }
           ?>
          
-          <li> <img calass="shope" src="./img/shope.png" alt=""> </li>
+          <li> <a href="miCarrito.php"><img calass="shope" src="./img/shope.png" alt=""></a> </li>
         </ul>
       </div>
   </div>
