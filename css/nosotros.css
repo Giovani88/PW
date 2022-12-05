@@ -5,6 +5,7 @@
 .item-valores{grid-area: item-v;}
 
 .contenedor-nosotros{
+  margin-top: 7.5rem;
   width: 100%;
   padding: auto;
   height: auto;

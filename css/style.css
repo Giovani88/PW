@@ -392,22 +392,15 @@ a{
     font-weight: 300;
     width: 100%;
 }
+
 footer{
     min-width: 100vh;
     background: #386641;
     margin-top: auto;
   }
   
-  footer .sociales{
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-    font-size: 24px;
-    height: 4rem;
-  }
-  
   .face-content {
-    padding: 14px 80px;
+    padding: 10px 70px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -418,6 +411,7 @@ footer{
       text-decoration: none;
       font-family: 'Montserrat', sans-serif;
       color: #fff;
+      text-align: center;
   }
   
   

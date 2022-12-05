@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/miCarrito.css">
     <title>Document</title>
 </head>
+
 <body>
     <?php include('nav.php');?>
     <?php 

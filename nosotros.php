@@ -42,13 +42,13 @@
       <h1 class="titulo-historia">Valores </h1>
       <p class='parrafo'><strong>Transparencia.</strong> En un entorno social donde cada vez es menos frecuente, dentro de nuestros valores empresariales podemos integrar la transparencia hacia nuestro equipo y hacia nuestros clientes. Transparencia implica confianza y las relaciones humanas, incluidas las comerciales, se forjan con confianza. <br> <br>
       <strong>Responsabilidad.</strong> Tanto en la vertiente social como en la ecológica, si demostramos ser responsables con la sociedad y el medio ambiente, haremos ver que no nos interesan únicamente los beneficios económicos. <br> <br>
-      <strong>Pasión.</strong> Este valor está directamente ligado al anterior, pero implica una mayor fuerza. Cuando alguien se muestra apasionado con su trabajo y con lo que hace, contagia esa pasión y esa energía a los demás. Si nuestra empresa les transmite a su equipo y sus clientes dicha pasión, ellos también se sentirán así.
+      <strong>Pasión.</strong> Este valor está directamente ligado al anterior, pero implica una mayor fuerza. Cuando alguien se muestra apasionado con su trabajo y con lo que hace, contagia esa pasión y esa energía a los demás.
 
       <h1 class="titulo-valores">
         Visión
       </h1>
       <p class="parrafo">
-        Propiciar el desarrollo de la actividad artesanal en el Estado, uniendo esfuerzos con los productores artesanos para preservar la riqueza y el arraigo cultural de las tradiciones, esto en un nuevo contexto en el que es indispensable la mejora continua del diseño y la calidad en la producción artesanal así como la búsqueda constante de nuevos mercados que ayuden al progreso económico y social de los artesanos. Así mismo apoyar el comercio a nivel nacional e internacional
+        Propiciar el desarrollo de la actividad artesanal en el Estado, uniendo esfuerzos con los productores artesanos para preservar la riqueza y el arraigo cultural de las tradiciones, esto en un nuevo contexto en el que es indispensable la mejora continua del diseño y la calidad en la producción artesanal así como la búsqueda constante de nuevos mercados que ayuden al progreso económico y social de los artesanos.
       </p>
 
       </p>

@@ -8,6 +8,7 @@
 }
 
 .contenedor{
+    padding: 7.5rem;
     display: flex;
     min-height: 50vh;
     flex-direction: column;

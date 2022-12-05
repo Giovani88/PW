@@ -16,7 +16,7 @@
         include('nav.php');    
     ?>
 
-    <h1 class='titulo'>Nuestros Artesanos</h1>
+    <h1 class='titulo' style="margin-top: 8rem">Nuestros Artesanos</h1>
 
 <!--         
     <div class="contenedor__artesano">

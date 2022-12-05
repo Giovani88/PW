@@ -200,7 +200,7 @@
 
       <div class="contenedor__producto">
         <div class="contenedor__imagen--artesano">
-            <img src="./img/artesano.png" alt="Producto">
+            <img src="./img/artesanos/artesano.png" alt="Producto">
         </div>
         <div class="contenedor__desc">
             <p id="nombre"> Fabian GilbertoMartínez</p>
@@ -213,7 +213,7 @@
       </div>
       <div class="contenedor__producto">
         <div class="contenedor__imagen--artesano">
-            <img src="./img/artesano2.png" alt="Producto">
+            <img src="./img/artesanos/artesano2.png" alt="Producto">
         </div>
         <div class="contenedor__desc">
             <p id="nombre">José Alfonso Soteno Fernández</p>
@@ -227,7 +227,7 @@
 
       <div class="contenedor__producto">
         <div class="contenedor__imagen--artesano">
-            <img src="./img/artesano3.png" alt="Producto">
+            <img src="./img/artesanos/artesano3.png" alt="Producto">
         </div>
         <div class="contenedor__desc">
             <p id="nombre">Irene Aguilar Alcántara</p>
@@ -239,7 +239,7 @@
 
       <div class="contenedor__producto">
         <div class="contenedor__imagen--artesano">
-            <img src="./img/artesano3.png" alt="Producto">
+            <img src="./img/artesanos/artesano3.png" alt="Producto">
         </div>
         <div class="contenedor__desc">
             <p id="nombre">Irene Aguilar Alcántara</p>
@@ -251,7 +251,7 @@
 
       <div class="contenedor__producto">
         <div class="contenedor__imagen--artesano">
-            <img src="./img/artesano3.png" alt="Producto">
+            <img src="./img/artesanos/artesano3.png" alt="Producto">
         </div>
         <div class="contenedor__desc">
             <p id="nombre">Irene Aguilar Alcántara</p>
