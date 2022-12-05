@@ -1,3 +1,6 @@
+<head>
+<link rel="stylesheet" href="./css/styles2.css">
+</head>
 <footer>
     <div class="sociales">
       <div class="face-content">

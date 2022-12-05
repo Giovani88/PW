@@ -2,7 +2,7 @@
 /*Datos de conexion a la base de datos*/
 
 //$db_host = "localhost:3307"; //Cambiar el puerto...
-$db_host = "localhost:3306";
+$db_host = "localhost:3307";
 $db_user = "root";
 $db_pass = "";
 $db_name = "yilaob";

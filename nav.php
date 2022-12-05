@@ -12,8 +12,8 @@
       <div class="menu_pestañas">
         <ul>           
           <li> <a href="index.php" target="_self">Inicio</a> </li>
-          <li> <a href="nosotros.php">Nosotros</a> </li>
-          <li> <a href="">Artesanos</a> </li>
+          <li> <a href="nosotros.php" target="_self">Nosotros</a> </li>
+          <li> <a href="artesanos.php" target="_self">Artesanos</a> </li>
           <li> <a href="">Artesanias</a> </li>
           <?php 
      
