@@ -69,6 +69,7 @@ word-wrap: break-word;
 }
 
 .contenedor-footer{
+  background-color: #386641;
   padding: 2rem  1rem 1rem 1rem;
   text-align: center;
   display: flex;

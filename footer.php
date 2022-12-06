@@ -1,6 +1,7 @@
 <head>
 <link rel="stylesheet" href="./css/styles2.css">
 </head>
+
 <footer>
   <div class="contenedor-footer">
     <div class="contenedor-logo-frase">

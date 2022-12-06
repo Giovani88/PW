@@ -1,3 +1,174 @@
 .formulario{
   padding: 7.5rem;
 }
+
+
+
+.item-titulo{grid-area: titulo;}
+.item-categorias{grid-area: categoria;}
+.item-artesanias{grid-area: artesanias;}
+
+.contenedor-artesanias{
+  margin-top: 7.5rem;
+  text-align: center;
+  display: grid;
+  grid-template-areas: 'titulo titulo titulo titulo titulo'
+                       'categoria artesanias artesanias artesanias artesanias';
+}
+
+.item-titulo{
+  padding: 1rem;
+}
+
+.item-categorias{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: .5rem 1rem;
+}
+
+.titulo-categoria{
+  margin: 0 0 1rem 0;
+}
+
+
+.buscador{grid-area: buscador;}
+.artesanias{grid-area: artesanias;}
+
+.item-artesanias{
+  display: grid;
+  grid-template-areas: 'buscador' 'artesanias';
+}
+
+.buscador{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.artesanias{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+
+
+
+
+/* estilos del buscador */
+.searchbar {
+  font-size: 14px;
+  font-family: arial, sans-serif;
+  color: #202124;
+  display: flex;
+  z-index: 3;
+  height: 44px;
+  background: white;
+  border: 1px solid #dfe1e5;
+  box-shadow: none;
+  border-radius: 24px;
+  width: 50%;
+
+}
+
+.searchbar:hover {
+  box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+  border-color: rgba(223,225,229,0);
+}
+
+.searchbar-wrapper {
+  flex: 1;
+  display: flex;
+  padding: 5px 8px 0 14px;
+}
+
+.searchbar-center {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.searchbar-input-spacer {
+  color: transparent;
+  flex: 100%;
+  white-space: pre;
+  height: 34px;
+  font-size: 16px;
+}
+
+.searchbar-input {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, .87);
+  word-wrap: break-word;
+  outline: none;
+  display: flex;
+  flex: 100%;
+  margin-top: -37px;
+  height: 34px;
+  font-size: 16px;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* estilos del boton */
+.btn-buscar {
+ color: #090909;
+ height: 44px;
+ padding: 0.7em 1.7em;
+ font-size: 18px;
+ border-radius: 24px;
+ background: #e8e8e8;
+ border: 1px solid #e8e8e8;
+ transition: all .3s;
+ box-shadow: 6px 6px 12px #c5c5c5;
+}
+
+.btn-buscar:hover {
+ border: 1px solid white;
+}
+
+.btn-buscar:active {
+ box-shadow: 4px 4px 12px #c5c5c5,
+             -4px -4px 12px #ffffff;
+}
+
+/* botones de categorias */
+.btn-categoria {
+ color: #090909;
+ height: 2rem;
+ padding: 0.7em 1.7em;
+ font-size: 13px;
+ border-radius: .5rem;
+ background: #e8e8e8;
+ border: 1px solid #e8e8e8;
+ transition: all .3s;
+ box-shadow: 6px 6px 12px #c5c5c5;
+ margin: .2rem  0 .2rem 0;
+}
+
+.btn-categoria {
+ border: 1px solid white;
+}
+
+.btn-categoria:active {
+ box-shadow: 4px 4px 12px #c5c5c5,
+             -4px -4px 12px #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
