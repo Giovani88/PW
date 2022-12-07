@@ -123,4 +123,9 @@
         }
 
     }
+    function eliminarCarrito($id_usuario){
+        require 'conexion.php';
+        mysqli_query($con, "DELETE FROM carrito WHERE id_usuario=$id_usuario");
+
+    }
 ?>

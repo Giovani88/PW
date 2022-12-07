@@ -58,7 +58,9 @@
     </table>
     <h3>Total: <?php echo "$$total MX"; ?></h3>
     <div class="botones">    
+        <form action="eliminarCarrito.php">
         <button class="btn_opcion vaciar">Vaciar Carrito</button>
+        </form>
         <button class="btn_opcion comprar">Comprar Ahora</button>        
     </div>
     </div>
