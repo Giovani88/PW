@@ -14,17 +14,22 @@
 <?php
   include("nav.php");
 ?>
+<?php 
+  $id=$_GET['id'];
+  require 'DBManager.php';
+  $artesania=json_decode(getArtesania($id));  
+?>
 <div class="contenedor-nosotros">
   <div class="contenedor-grid">
     <div class="item-historia">
-      <h2 class="desc-titule">Guanengo</h2>
+      <h2 class="desc-titule"><?php echo $artesania->nombre?></h2>
 
       <p class="descripcion" style="margin-top: 2rem;">Descripción:
         <br>
         <br>
       </p>
       <p class="desc-producto">
-                El huanengo es una blusa típica indígena de Michoacán, México. Es blanca y tiene tiene bordados brillantes. Esta palabra viene de una palabra tarasca (lengua hablada por los purépechas), uanenju que significa blusa.
+          <?php echo $artesania->descripcion ?>
       </p>
       <br>
       <br>
@@ -33,33 +38,21 @@
       <br>
       <br>
 
-      <p class="desc-precio">Precio: $280.00 Mx</p>
+      <p class="desc-precio">Precio: $ <?php echo $artesania->precio?> MX</p>
+      <br>
+      <form action="agregarCarrito.php" method="POST">
+      Cantidad: <input type="number" name="cantidad" value="1" step="1" min="1">
       <br>
       <br>
 
-      <label for="lang">Elige tu talla: </label>
-      <select name="lenguajes" id="lang">
-          <option value="javascript">32</option>
-          <option value="php">34</option>
-          <option value="java">36</option>
-          <option value="golang">37</option>
-        </select>
-            
-
-
-      <br>
-      <br>
-      Cantidad: <input type="number" value="1" step="1" >
-
-      <br>
-      <br>
-      <button class="bnt-añadir">Añadir al carrito</button>
-
-      
+        <input type="hidden" name="id_artesania" value="<?php echo $artesania->id_artesania?>">
+            <button class="bnt-añadir">Añadir al carrito</button>
+      </form>
+     
     </div>
     <div class="item-img1">
       <div class="contenedor-img">
-        <img class="cont-img" src="./img/guanengo.png" alt="">
+        <img class="cont-img" src="./img/artesanias/<?php echo $artesania->imagen ?>" alt="">
       </div>
     </div>
     
@@ -89,9 +82,8 @@
                   <p id="desc">Craneo Frida Kahlo</p>
                   <p id="precio">$1,221.07</p>
               </div>
-              <div class="contenedor__btn">
-                  <button>Agregar al carrito</button>
-              </div>
+              
+
               
             </div>
             <div class="contenedor__producto">
@@ -149,6 +141,6 @@
 ?>
 
 
-  
+
 </body>
 </html>

@@ -32,16 +32,15 @@
     }                
     
 
-    function agregarCarrito($id_artesania,$id_usuario){
+    function agregarCarrito($id_artesania,$id_usuario,$cantidad){
         require 'conexion.php';
-      /*  $sql = "INSERT INTO carrito VALUES ('',$id_usuario,$id_artesania,1,10)";
-        $resultado = mysqli_query($con, $sql);*/
         $carrito = existeArtesania($id_usuario, $id_artesania);
         if($carrito!=null){ //Si es verdadero, se modifica                
             modificarCarrito($carrito['id_carrito'],$carrito['cantidad'],$carrito['subtotal']);
         }else{//si es falso, se inserta        
             $precio = precioArtesania($id_artesania);
-            $sql = "INSERT INTO carrito VALUES ('',$id_usuario,$id_artesania,1,$precio)";
+            $precio *= $cantidad;
+            $sql = "INSERT INTO carrito VALUES ('',$id_usuario,$id_artesania,$cantidad,$precio)";
             mysqli_query($con, $sql);
         } 
         mysqli_close($con);
@@ -111,5 +110,17 @@
         $consulta = mysqli_query($con, "UPDATE carrito SET cantidad=$cantidad,subtotal=$precio_unitario WHERE id_carrito=$id_carrito");
         mysqli_close($con);
     }
+    function getArtesania($id_artesania){
+        require 'conexion.php';        
+        $sql = "SELECT * FROM artesanias WHERE id_artesania=$id_artesania"; 
+        $result = mysqli_query($con, $sql);        
+        if (mysqli_num_rows($result) > 0) {
+            // Los resultados se agregan a un arreglo
+            $resultados = array();
+            $fetch = mysqli_fetch_array($result, MYSQLI_ASSOC);
+            mysqli_close($con);
+            return json_encode($fetch);
+        }
 
+    }
 ?>

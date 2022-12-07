@@ -5,21 +5,21 @@
 .fi{
     font-size: 2rem;
     cursor: pointer;
+    color: #54994E;
+
 }
 
 .contenedor{
-    padding: 7.5rem;
+    
     display: flex;
     min-height: 50vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 7.5rem;
+    margin-bottom: 40vh;
 }
-/* .tabla{
-    display: flex;
-    width: 20rem;
-    background-color: #FFFFFF;
-} */
+
 /*Estilos a la tabla*/
 table.unstyledTable {
     width: fit-content;
@@ -43,3 +43,55 @@ table.unstyledTable {
   #svg_1{
     width: 50px;
   }
+
+.botones{
+  display: flex;
+  width: 100%;
+  margin: 2rem 0;
+  justify-content: space-between;
+}
+
+path{
+  fill:#da0037 !important;
+  cursor: pointer;
+}
+.btn_opcion{
+  padding: 0.5rem 1rem; 
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1.2rem;
+ 
+}
+.vaciar{
+  background-color: #da0037;
+  cursor: pointer;
+}
+.comprar{
+  background-color: #54994E;
+  cursor: pointer;
+}
+.vaciar:hover{
+  background-color: hsl(345, 98%, 46%);
+  
+}
+.comprar:hover{
+  background-color: hsl(115, 34%, 52%);
+  
+}
+.tabla{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+td{
+  color: black;
+  font-weight: bold;
+}
+h3{
+  font-size: x-large;
+}
+h1{
+  margin: 1rem 0;
+}

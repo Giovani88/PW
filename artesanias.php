@@ -53,118 +53,30 @@
 
         </div>
         <div class="artesanias">
-          
-        <div class="contenedor__producto">
-          <a href="producto.php">
-            <div class="contenedor__imagen">
-              <img src="./img/guanengo.png" alt="Producto">
-            </div>
+        <?php foreach($artesanias as $artesania) { ?>
+         <a href="producto.php?id=<?php echo $artesania->id_artesania?>" target="_self">
+          <form action="agregarCarrito.php" method="POST" class="contenedor__producto">
+              <input type="hidden" name="id_artesania" value="<?php echo $artesania->id_artesania?>">
+              <div class="contenedor__imagen">
+                  <img src="./img/artesanias/<?php echo $artesania->imagen?>" alt="Producto">
+              </div>
+              <div class="contenedor__desc">
+                    <p id="desc"><?php echo $artesania->nombre ?></p>
+                    <p id="precio">$<?php echo $artesania->precio ?> MX</p>
+              </div>
+              <div class="contenedor__btn">
+                  <button>Agregar al carrito</button>
+              </div>    
+          </form> 
           </a>
-            <div class="contenedor__desc">
-                <p id="desc">Guanengo</p>
-                <p id="precio">$1,500.07</p>
-            </div>
-          
-          <div class="contenedor__btn">
-              <button>Agregar al carrito</button>
-          </div>     
-        </div>
-
-        <div class="contenedor__producto">
-          <a href="producto.php">
-            <div class="contenedor__imagen">
-              <img src="./img/guanengo.png" alt="Producto">
-            </div>
-          </a>
-            <div class="contenedor__desc">
-                <p id="desc">Guanengo</p>
-                <p id="precio">$1,500.07</p>
-            </div>
-          
-          <div class="contenedor__btn">
-              <button>Agregar al carrito</button>
-          </div>     
-        </div>
-
-        <div class="contenedor__producto">
-          <a href="producto.php">
-            <div class="contenedor__imagen">
-              <img src="./img/guanengo.png" alt="Producto">
-            </div>
-          </a>
-            <div class="contenedor__desc">
-                <p id="desc">Guanengo</p>
-                <p id="precio">$1,500.07</p>
-            </div>
-          
-          <div class="contenedor__btn">
-              <button>Agregar al carrito</button>
-          </div>     
-        </div>
-
-        <div class="contenedor__producto">
-          <a href="producto.php">
-            <div class="contenedor__imagen">
-              <img src="./img/guanengo.png" alt="Producto">
-            </div>
-          </a>
-            <div class="contenedor__desc">
-                <p id="desc">Guanengo</p>
-                <p id="precio">$1,500.07</p>
-            </div>
-          
-          <div class="contenedor__btn">
-              <button>Agregar al carrito</button>
-          </div>     
-        </div>
-
-        <div class="contenedor__producto">
-          <a href="producto.php">
-            <div class="contenedor__imagen">
-              <img src="./img/guanengo.png" alt="Producto">
-            </div>
-          </a>
-            <div class="contenedor__desc">
-                <p id="desc">Guanengo</p>
-                <p id="precio">$1,500.07</p>
-            </div>
-          
-          <div class="contenedor__btn">
-              <button>Agregar al carrito</button>
-          </div>     
-        </div>
-
-        <div class="contenedor__producto">
-          <a href="producto.php">
-            <div class="contenedor__imagen">
-              <img src="./img/guanengo.png" alt="Producto">
-            </div>
-          </a>
-            <div class="contenedor__desc">
-                <p id="desc">Guanengo</p>
-                <p id="precio">$1,500.07</p>
-            </div>
-          
-          <div class="contenedor__btn">
-              <button>Agregar al carrito</button>
-          </div>     
-        </div>
-
+        <?php } ?>
         </div>
       </div>
     </div>
     
 
 
-  <!-- <?php foreach($artesanias as $artesania) { ?>
-    <form action="agregarCarrito.php" method="POST" class="formulario">
-        <input type="hidden" name="id_artesania" value="<?php echo $artesania->id_artesania?>">
-        <p>
-          <?php echo $artesania->nombre?>
-       </p> 
-       <button> Agregar</button>    
-      </form> 
-  <?php } ?> -->
+
 
 
 
