@@ -134,4 +134,59 @@
         mysqli_query($con, "DELETE FROM carrito WHERE id_usuario=$id_usuario");
 
     }
+
+    function addVenta($id_usuario,$total){
+        require 'conexion.php';
+        $sql = "INSERT INTO ventas VALUES ('','$id_usuario','$total',now())";
+        mysqli_query($con, $sql);
+        mysqli_close($con); 
+        $id = getIdVenta();
+        insertarDetalle($id_usuario,$id);
+        eliminarCarrito($id_usuario);
+    }
+    function getIdVenta(){
+        require 'conexion.php';
+        $sql = "SELECT id_venta FROM ventas order by id_venta desc LIMIT 1";        
+        $consulta = mysqli_query($con, $sql);
+        $id = mysqli_fetch_array($consulta);
+        mysqli_close($con); 
+        return $id['id_venta'];
+    }
+    function modificarArtesaniaStock($id_artesania,$cantidad){
+        require 'conexion.php';
+        //obtener el valor actual
+        $sql = "UPDATE artesanias SET unidades=unidades-$cantidad WHERE id_artesania=$id_artesania";
+        mysqli_query($con, $sql);
+        mysqli_close($con); 
+    }
+
+    function insertarDetalle($id_usuario,$id_venta){
+        require 'conexion.php';
+        $sql = "SELECT * FROM carrito WHERE id_usuario=$id_usuario";
+        $resultArray = mysqli_query($con, $sql);        
+        if (mysqli_num_rows($resultArray) > 0) {
+            // Los resultados se agregan a un arreglo
+            $resultados = array();
+            while( ($fetch = mysqli_fetch_array($resultArray, MYSQLI_ASSOC))!= NULL) {
+                // array_push($resultados, $fetch);
+                $id_artesania= $fetch['id_artesania'];
+                $cantidad= $fetch['cantidad'];
+                $subtotal= $fetch['subtotal'];
+                $sql = "INSERT INTO detalle_venta VALUES('',$id_artesania,$cantidad,$subtotal,$id_venta)";
+                modificarArtesaniaStock($id_artesania,$cantidad);
+                mysqli_query($con, $sql); 
+            }   
+            mysqli_close($con);
+            return json_encode($resultados);
+        }     
+    }
+    /*
+        1) Insertar en la tabla de ventas done
+        2) obtener el id del registro del paso 1 ¿ SELECT * FROM `ventas` order by id_venta desc LIMIT 1 ?
+            2.1) Obtener los valores de la tabla carrito donde id_user sea el mismo
+            2.2) Insertar los mismos valores a la tabla detalle carrito    
+        3) insertar uno o mas registros (ciclo) en la tabla de detalle junto con el id del paso 2
+        4)Eliminar el carrito del usuario
+    */
 ?>
+

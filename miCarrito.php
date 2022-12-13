@@ -23,9 +23,10 @@
         }else{
             header("location:login.php");
         }
+        $total=0;
     ?>
     <div class="contenedor">
-    <?php if($carrito!=null){ $total=0;?>
+    <?php if($carrito!=null){ ?>
         
 
         <h1>Mi carrito</h1>
@@ -61,7 +62,10 @@
         <form action="eliminarCarrito.php">
         <button class="btn_opcion vaciar">Vaciar Carrito</button>
         </form>
-        <button class="btn_opcion comprar">Comprar Ahora</button>        
+        <form action="addVenta.php" method="post">
+            <input type="hidden" name="total" value="<?php echo $total?>">
+            <button class="btn_opcion comprar">Comprar Ahora</button>        
+        </form>
     </div>
     </div>
 
