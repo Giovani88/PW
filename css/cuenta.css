@@ -1,0 +1,50 @@
+.item-cuenta{grid-area: cuenta;
+width: 100%;}
+.item-compras{grid-area: compra; width: 100%; }
+
+.contenedor-micuenta{
+  margin-top: 9rem;
+  padding: .5rem;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-areas: 'cuenta cuenta compra';
+  text-align: center;
+}
+
+.imagen-perfil{
+  width: 15rem;
+  height: 18rem;
+  border-radius: 15px;
+}
+
+.item-cuenta{
+  display: grid;
+  grid-template-areas: 'perfil perfil' 'img informacion';
+  
+}
+
+.item-compras{
+  padding: .5rem;
+}
+
+/* estilos de los objetos que estan en .item-cuenta */
+.titulo-perfil{
+  grid-area: perfil;
+
+}
+.contenedor-img{
+  grid-area: img;
+  padding: 1rem 0 0 0 ;
+}
+
+.contenedor-informacion{
+  grid-area: informacion;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 0 0 0 ;
+}
+
+

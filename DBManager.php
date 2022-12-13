@@ -14,6 +14,22 @@
             return json_encode($resultados);
         }
     }
+
+    function domicilio($domicilio){
+        require 'conexion.php';
+        $sql = "SELECT domicilio FROM artesanias";
+        $resultArray = mysqli_query($con, $sql);        
+        if (mysqli_num_rows($resultArray) > 0) {
+            // Los resultados se agregan a un arreglo
+            $resultados = array();
+            while( ($fetch = mysqli_fetch_array($resultArray, MYSQLI_ASSOC))!= NULL) {
+                array_push($resultados, $fetch);
+            }   
+            mysqli_close($con);
+            return json_encode($resultados);
+        }
+    }
+
     function getCarrito($id_usuario){
         require 'conexion.php';
         $sql = "SELECT * FROM carrito 

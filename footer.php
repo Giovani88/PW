@@ -1,5 +1,6 @@
 <head>
-<link rel="stylesheet" href="./css/styles2.css">
+<link rel="stylesheet" href="css/styles2.css">
+<link rel="stylesheet" href="./css/style.css">
 </head>
 
 <footer>

@@ -8,6 +8,14 @@
   <script defer src="java.js"></script>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/alert.css">
+
+  <!-- estilos de boostrap -->
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+		<link rel="stylesheet" href="css/style.css">
+
+
 </head>
 
 <body>
@@ -115,7 +123,7 @@
       <div class="contenedor__producto">
         <a href="producto.php">
           <div class="contenedor__imagen">
-            <img src="./img/guanengo.png" alt="Producto">
+            <img src="./img/artesanias/guanengo.png" alt="Producto">
           </div>
         </a>
           <div class="contenedor__desc">

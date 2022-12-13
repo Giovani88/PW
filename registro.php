@@ -26,7 +26,7 @@ if(isset($_POST['enviar'])){
     $correo = $_POST['correo'];
     $password=$_POST['password'];
 
-    $query = "INSERT INTO usuarios VALUES ('','$nombre','$apellidos','$correo',sha1('$password'),now())";
+    $query = "INSERT INTO usuarios VALUES ('','$nombre','$apellidos','$correo',sha1('$password'),now()),'',''";
 
     $insert = mysqli_query($con, $query) or die(mysqli_error());
     if($insert){
