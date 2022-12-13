@@ -1,8 +1,14 @@
 <?php 
 
-    function artesanias(){
+    function artesanias($tipo,$filtro){
         require 'conexion.php';
         $sql = "SELECT * FROM artesanias";
+        if($tipo==1){
+            $sql= "SELECT * FROM artesanias WHERE nombre LIKE '%$filtro%'";
+        }else if($tipo==2){
+            $sql= "SELECT * FROM artesanias WHERE categoria='$filtro'";
+        }        
+
         $resultArray = mysqli_query($con, $sql);        
         if (mysqli_num_rows($resultArray) > 0) {
             // Los resultados se agregan a un arreglo

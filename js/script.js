@@ -1,7 +1,6 @@
 window.addEventListener('load',function(){
 
     let itemIndex = 0,isPaused = false;
-
     document.querySelector(".slider-container").innerHTML = `
         <div class = "slider-item"></div>
         <ul class = "pagination"></ul>

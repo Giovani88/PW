@@ -17,42 +17,61 @@
     
     <?php 
       require 'DBManager.php';
-      $artesanias = json_decode(artesanias());
+      if(isset($_GET['nombre'])){
+        $artesanias = json_decode(artesanias(1,$_GET['nombre']));  
+      }else if(isset($_GET['categoria'])){
+        $artesanias = json_decode(artesanias(2,$_GET['categoria']));  
+      }
+      else{
+        $artesanias = json_decode(artesanias(0,""));
+      }
+      
     ?>
 
     <div class="contenedor-artesanias">
       <div class="item-titulo">
         <h1>Artesanias</h1>
       </div>
-      <div class="item-categorias">
+      <form method="GET" class="item-categorias">
 
         <h2 class="titulo-categoria">Categoria</h2>
-        <button class="btn-categoria">Catrinas</button>
-        <button class="btn-categoria">Ropa</button>
-        <button class="btn-categoria">Alebrijes</button>
-        <button class="btn-categoria">Juguetes</button>
-        <button class="btn-categoria">Jarrones</button>
-        <button class="btn-categoria">Joyeria</button>
-        <button class="btn-categoria">Vajillas</button>
+        <button type="submit" id="Catrinas"  name="categoria" value="Catrinas" class="btn-categoria">Catrinas</button>
+        <button type="submit" id="Ropa"  name="categoria" value="Ropa" class="btn-categoria">Ropa</button>
+        <button type="submit" id="Alebrijes" name="categoria" value="Alebrijes" class="btn-categoria">Alebrijes</button>
+        <button type="submit" id="Juguetes"  name="categoria" value="Juguetes" class="btn-categoria">Juguetes</button>
+        <button type="submit" id="Jarrones"  name="categoria" value="Jarrones" class="btn-categoria">Jarrones</button>
+        <button type="submit" id="Joyeria"  name="categoria" value="Joyeria" class="btn-categoria">Joyeria</button>
+        <button type="submit" id="Vajillas"  name="categoria" value="Vajillas" class="btn-categoria">Vajillas</button>
+        <?php 
+          if(isset($_GET['categoria'])){
+            $categoria = $_GET['categoria'];
+            $s = "<script>";
+            $s.= "document.getElementById('$categoria').style='color:#fff;background-color:#6A994E;'";
+            $s.= "</script>";
+            echo $s;
+          } 
+        
+          ?>
 
-      </div>
+      </form>
       <div class="item-artesanias">
         <div class="buscador">
-
+          
           <div class="searchbar">
               <div class="searchbar-wrapper">
                   <div class="searchbar-center">
                       <div class="searchbar-input-spacer"></div>
-                      <input type="text" class="searchbar-input" maxlength="2048" name="q" autocapitalize="off" autocomplete="off" title="Search" role="combobox" placeholder="Buscar un producto">
+                      <form style="width:100%" action="" method="get">
+                      <input type="text" class="searchbar-input" value="<?php if(isset($_GET['nombre']))echo $_GET['nombre']; ?>" maxlength="2048" name="nombre" autocapitalize="off" autocomplete="off" title="Search" role="combobox" placeholder="Buscar un producto">
                   </div>
               </div>
           </div>
-
-          <button class="btn-buscar"> Buscar </button>
-
+          <button type="submit" class="btn-buscar"> Buscar </button>
+          </form>
 
         </div>
         <div class="artesanias">
+        <?php if($artesanias){?>
         <?php foreach($artesanias as $artesania) { ?>
          <a href="producto.php?id=<?php echo $artesania->id_artesania?>" target="_self">
           <form action="agregarCarrito.php" method="POST" class="contenedor__producto">
@@ -70,7 +89,11 @@
           </form> 
           </a>
         <?php } ?>
+        <?php }else{
+          echo '<h3>Artesania no disponible</h3>';
+        } ?>
         </div>
+  
       </div>
     </div>
     

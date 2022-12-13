@@ -153,6 +153,7 @@
 
 .btn-categoria {
  border: 1px solid white;
+ cursor: pointer;
 }
 
 .btn-categoria:active {
