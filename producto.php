@@ -18,6 +18,7 @@
   $id=$_GET['id'];
   require 'DBManager.php';
   $artesania=json_decode(getArtesania($id));  
+  $artesanias = json_decode(artesanias(2,$artesania->categoria));  
 ?>
 <div class="contenedor-nosotros">
   <div class="contenedor-grid">
@@ -33,15 +34,14 @@
       </p>
       <br>
       <br>
-
-      <p class="desc-product">Creado por: <strong>Irene Aguilar Alcántara</strong> </p>
+      <p class="desc-producto">Creado por: <strong>Irene Aguilar Alcántara</strong> </p>
       <br>
+      <p class="desc-producto">Piezas disponibles: <b><?php echo $artesania->unidades?></b></p>
       <br>
-
       <p class="desc-precio">Precio: $ <?php echo $artesania->precio?> MX</p>
       <br>
       <form action="agregarCarrito.php" method="POST">
-      Cantidad: <input type="number" name="cantidad" value="1" step="1" min="1">
+      <label>Cantidad:</label> <input type="number" id="cantidad" name="cantidad" value="1" step="1" min="1">
       <br>
       <br>
 
@@ -54,84 +54,33 @@
       <div class="contenedor-img">
         <img class="cont-img" src="./img/artesanias/<?php echo $artesania->imagen ?>" alt="">
       </div>
-    </div>
-    
+    </div>    
     <div class="item-img2">   
       <div class="contenedor">
-        <h1 class="titulo">Artesanias de la misma categoría...</h1>
-        <div class="contenedor__productos">
-          <div class="contenedor__producto">
-            <a href="producto.php">
+        <?php if($artesanias){?>
+          <h1 class="titulo">Artesanias de la misma categoría...</h1>
+        <?php foreach($artesanias as $artesania) { ?>
+         <a href="producto.php?id=<?php echo $artesania->id_artesania?>" target="_self">
+          <form action="agregarCarrito.php" method="POST" class="contenedor__producto">
+              <input type="hidden" name="id_artesania" value="<?php echo $artesania->id_artesania?>">
               <div class="contenedor__imagen">
-                <img src="./img/guanengo.png" alt="Producto">
-              </div>
-            </a>
-              <div class="contenedor__desc">
-                  <p id="desc">Guanengo</p>
-                  <p id="precio">$1,500.07</p>
-              </div>          
-              <div class="contenedor__btn">
-                  <button>Agregar al carrito</button>
-              </div>     
-            </div>
-            <div class="contenedor__producto">
-              <div class="contenedor__imagen">
-                  <img src="./img/frida.jpg" alt="Producto">
+                  <img src="./img/artesanias/<?php echo $artesania->imagen?>" alt="Producto">
               </div>
               <div class="contenedor__desc">
-                  <p id="desc">Craneo Frida Kahlo</p>
-                  <p id="precio">$1,221.07</p>
-              </div>
-              
-
-              
-            </div>
-            <div class="contenedor__producto">
-
-                <div class="contenedor__imagen">
-                    <img src="./img/catrina.png" alt="Producto">
-                </div>
-                <div class="contenedor__desc">
-                    <p id="desc">Catrina con calabazas</p>
-                    <p id="precio">$1,221.07</p>
-                </div>
-              <div class="contenedor__btn">
-                  <button>Agregar al carrito</button>
-              </div>
-              
-            </div>
-            <div class="contenedor__producto">
-              <div class="contenedor__imagen">
-                  <img src="./img/catrina.png" alt="Producto">
-              </div>
-              <div class="contenedor__desc">
-                  <p id="desc">Catrina con calabazas</p>
-                  <p id="precio">$1,221.07</p>
+                    <p id="desc"><?php echo $artesania->nombre ?></p>
+                    <p id="precio">$<?php echo $artesania->precio ?> MX</p>
               </div>
               <div class="contenedor__btn">
                   <button>Agregar al carrito</button>
-              </div>
-              
-            </div>
-            <div class="contenedor__producto">
-              <div class="contenedor__imagen">
-                  <img src="./img/catrina.png" alt="Producto">
-              </div>
-              <div class="contenedor__desc">
-                  <p id="desc">Catrina con calabazas</p>
-                  <p id="precio">$1,221.07</p>
-              </div>
-              <div class="contenedor__btn">
-                  <button>Agregar al carrito</button>
-              </div>
-              
-            </div>
-          </div>
+              </div>    
+          </form> 
+          </a>
+        <?php } ?>
+        <?php } ?>
         </div>
 
     </div>
 
-  </div>
 </div>
 
 

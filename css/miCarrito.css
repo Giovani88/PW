@@ -87,11 +87,21 @@ path{
 
 td{
   color: black;
-  font-weight: bold;
+  font-weight: 500;
 }
 h3{
   font-size: x-large;
 }
 h1{
   margin: 1rem 0;
+}
+#total{
+  letter-spacing: 50px;
+}
+#asterisco{
+  color: #da0037;
+}
+
+.iva{
+  font-size: 16px;
 }

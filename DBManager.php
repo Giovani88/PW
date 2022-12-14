@@ -180,6 +180,48 @@
             return json_encode($resultados);
         }     
     }
+    function getArtesanos(){
+        require 'conexion.php';
+        $sql = "SELECT * FROM artesanos";
+        $resultArray = mysqli_query($con, $sql);        
+        if (mysqli_num_rows($resultArray) > 0) {
+            // Los resultados se agregan a un arreglo
+            $resultados = array();
+            while( ($fetch = mysqli_fetch_array($resultArray, MYSQLI_ASSOC))!= NULL) {
+                array_push($resultados, $fetch);
+            }   
+            mysqli_close($con);
+            return json_encode($resultados);
+        }
+    }
+    function getCompras($id_usuario){
+        require 'conexion.php';
+        $sql = "SELECT * FROM ventas WHERE id_usuario='$id_usuario' ORDER BY fecha_venta desc";
+        $resultArray = mysqli_query($con, $sql);        
+        if (mysqli_num_rows($resultArray) > 0) {
+            // Los resultados se agregan a un arreglo
+            $resultados = array();
+            while( ($fetch = mysqli_fetch_array($resultArray, MYSQLI_ASSOC))!= NULL) {
+                array_push($resultados, $fetch);
+            }   
+            mysqli_close($con);
+            return json_encode($resultados);
+        }
+    }
+    function getDetalleCompra($id_venta){
+        require 'conexion.php';
+        $sql = "SELECT * FROM detalle_venta INNER JOIN artesanias ON detalle_venta.id_artesania=artesanias.id_artesania WHERE id_venta='$id_venta'";
+        $resultArray = mysqli_query($con, $sql);        
+        if (mysqli_num_rows($resultArray) > 0) {
+            // Los resultados se agregan a un arreglo
+            $resultados = array();
+            while( ($fetch = mysqli_fetch_array($resultArray, MYSQLI_ASSOC))!= NULL) {
+                array_push($resultados, $fetch);
+            }   
+            mysqli_close($con);
+            return json_encode($resultados);
+        }        
+    }
     /*
         1) Insertar en la tabla de ventas done
         2) obtener el id del registro del paso 1 ¿ SELECT * FROM `ventas` order by id_venta desc LIMIT 1 ?
@@ -187,6 +229,12 @@
             2.2) Insertar los mismos valores a la tabla detalle carrito    
         3) insertar uno o mas registros (ciclo) en la tabla de detalle junto con el id del paso 2
         4)Eliminar el carrito del usuario
+
+
+        //Compras
+        1) Obtener todas las compras de un cliente 
+            SELECT * FROM `ventas` WHERE id_usuario=23
+        2) Buscar los detalles de dicha venta (id_venta) en un ciclo
     */
 ?>
 

@@ -57,7 +57,8 @@
             
     <?php $total+=$item->subtotal; }?>
     </table>
-    <h3>Total: <?php echo "$$total MX"; ?></h3>
+    <h3>Total: <?php echo "$$total MX"; ?><span id=asterisco>*</span></h3>
+    <p class="iva"><span id=asterisco>*</span> IVA incluido</p>
     <div class="botones">    
         <form action="eliminarCarrito.php">
         <button class="btn_opcion vaciar">Vaciar Carrito</button>
