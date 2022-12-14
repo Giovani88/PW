@@ -47,7 +47,7 @@
     </div>
     <?php }?>
     <?php }else{
-        echo '<h1>Carrito Vacío</h1>';
+        echo '<h1>No ha realizado ninguna compra!</h1>';
     }?>
 </div>
 <?php include('footer.php');?>

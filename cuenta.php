@@ -7,9 +7,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/cuenta.css">
+    
     <script defer src="js/alert.js"></script>
     <script  src="js/eliminarReg.js"></script>
+    <link rel="stylesheet" href="css/cuenta.css">
     <title>Document</title>
 </head>
 <body class="body-cuenta">
@@ -58,9 +59,10 @@
 
       <div class="item-compras">
 
-          <button class="btn editar"  onclick="location.href='http://localhost/artesanias_copia/editar_cuenta.php'">Editar informacion</button>
+          <!-- <button class="btn editar"  onclick="location.href='http://localhost/artesanias_copia/editar_cuenta.php'">Editar informacion</button> -->
+          <a class="btn editar" href="editar_Cuenta.php">Editar informacion</a>
           
-          <button class="btn carrito"  type="submit">Ir a mi carrito</button>
+          <a class="btn carrito"  href="compras.php">Ir a mi carrito</a>
 
           <button class="btn eliminar"  onclick="notificar(<?php echo $id ?>)">Eliminar cuenta</button>
           
