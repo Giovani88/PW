@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/alert.css">
   <link rel="stylesheet" href="./css/artesanos.css">
+
 </head>
 
 <body>
