@@ -23,7 +23,7 @@
 .item-categorias{
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 20rem;
   padding: .5rem 1rem;
 }
 

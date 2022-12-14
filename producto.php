@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/styles2.css">
+  <link rel="stylesheet" href="css/artesanias.css">
   <link rel="stylesheet" href="css/producto.css">
   <title>Nosotros</title>
 </head>
@@ -58,26 +59,28 @@
     <div class="item-img2">   
       <div class="contenedor">
         <?php if($artesanias){?>
+          <div class="artesanias">
           <h1 class="titulo">Artesanias de la misma categoría...</h1>
-        <?php foreach($artesanias as $artesania) { ?>
-         <a href="producto.php?id=<?php echo $artesania->id_artesania?>" target="_self">
-          <form action="agregarCarrito.php" method="POST" class="contenedor__producto">
-              <input type="hidden" name="id_artesania" value="<?php echo $artesania->id_artesania?>">
-              <div class="contenedor__imagen">
-                  <img src="./img/artesanias/<?php echo $artesania->imagen?>" alt="Producto">
-              </div>
-              <div class="contenedor__desc">
-                    <p id="desc"><?php echo $artesania->nombre ?></p>
-                    <p id="precio">$<?php echo $artesania->precio ?> MX</p>
-              </div>
-              <div class="contenedor__btn">
-                  <button>Agregar al carrito</button>
-              </div>    
-          </form> 
-          </a>
+            <?php foreach($artesanias as $artesania) { ?>
+            <a href="producto.php?id=<?php echo $artesania->id_artesania?>" target="_self">
+              <form action="agregarCarrito.php" method="POST" class="contenedor__producto">
+                  <input type="hidden" name="id_artesania" value="<?php echo $artesania->id_artesania?>">
+                  <div class="contenedor__imagen">
+                      <img src="./img/artesanias/<?php echo $artesania->imagen?>" alt="Producto">
+                  </div>
+                  <div class="contenedor__desc">
+                        <p id="desc"><?php echo $artesania->nombre ?></p>
+                        <p id="precio">$<?php echo $artesania->precio ?> MX</p>
+                  </div>
+                  <div class="contenedor__btn">
+                      <button>Agregar al carrito</button>
+                  </div>    
+              </form> 
+              </a>
+            <?php } ?>
         <?php } ?>
-        <?php } ?>
-        </div>
+            </div>
+      </div>
 
     </div>
 
