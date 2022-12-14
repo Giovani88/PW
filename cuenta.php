@@ -7,59 +7,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/registro.css">
-    <link rel="stylesheet" href="css/registro.css">
-  <link rel="stylesheet" href="css/styles2.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="./css/alert.css">
-  <script defer src="alert.js"></script>
+    <link rel="stylesheet" href="css/cuenta.css">
+    <script defer src="js/alert.js"></script>
+    <script  src="js/eliminarReg.js"></script>
     <title>Document</title>
 </head>
-<body>
-    <?php
+<body class="body-cuenta">
+  <?php
     include("nav.php");
 
         require 'conexion.php';
         $id = $_SESSION["id"];
-        $query = "SELECT * FROM usuarios WHERE id_usuario='$id'";
+        $query = "SELECT * from domicilio INNER JOIN usuarios on usuarios.correo = domicilio.fk_usuario WHERE usuarios.id_usuario = '$id'";
         $consulta = mysqli_query($con,$query);
         if(mysqli_num_rows($consulta)!=0){//Si encontro el usuario		
             $row = mysqli_fetch_assoc($consulta);
             $nombre = $row['nombre'];    
             $apellidos = $row['apellidos'];    
-            $correo = $row['correo'];    
+            $correo = $row['correo'];
+            $foto = $row['foto'];
+            $calle = $row['calle'];
+            $numero = $row['numero']; 
+            $cod_postal = $row['cp']; 
+            $ciudad = $row['ciudad'];
+            $estado = $row['estado'];
+            $municipio = $row['municipio'];     
         }
+
+        
+
     ?>
 
-      <form class="contenedor-registro" action="" method="post" onsubmit="return verificarPasswords();" > 
-      <div class="contenedor-formulario">
-        <div class="item1">
-          <h1 class="h1-r">Mi cuenta</h1>
-        </div>
-        <div id="alert" class='alert ocultar'>
-       <span class='closebtn'>&times;</span>
-       Las Contraseñas No Coinciden
-     </div>
-        <div class="item2">
-          <input placeholder="Nombre" type="text" name="nombre" class="input" value="<?php echo $nombre; ?>" required><br>
-          <input placeholder="Apellidos" type="text" name="apellidos" class="input" value="<?php echo $apellidos; ?>" required><br>
-          <input placeholder="Correo" type="email" name="correo" class="input" value="<?php echo $correo; ?>" pattern="^[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}$"required><br>                    
-        </div>
-        <div class="item3">
-          <input placeholder="Nueva contraseña" id="pass2" type="password" class="input" required><br>
-          <input placeholder="Repite la contraseña" id="pass2" type="password" class="input" required><br>
-        </div>
-        <div class="item4">
-            <div class="container-botones">
-              <div class="btn-cancelar">
-                <a class="cancelar" href="index.php">Cancelar</a>
-              </div>
-              <div class="btn-enviar">
-                <button class="enviar" name="enviar" type="submit">Guardar Cambios</button>
-              </div>
-            </div>
-        </div>
+  <div class="contenedor-micuenta">
+    <div class="item-cuenta">
+
+      <div class="titulo-perfil">
+        <h2>Mi perfil</h2>
       </div>
-  </form>
+
+      <div class="contenedor-img">
+        <img class="imagen-perfil" src="img/usuarios/<?php echo $foto ?> " alt="">
+      </div>
+      
+      <div class="contenedor-informacion">
+        <p class="nombre"><strong>Nombre:</strong>  <?php echo $nombre ?></p>
+        <p class="apellidos"><strong>Apellidos:</strong> <?php echo $apellidos ?> </p>
+        <p class="correo"><strong>Correo:</strong> <?php echo $correo ?> </p>
+        <p class="direccion"><strong>Direccion:</strong> <?php echo $calle," #",$numero,", ",$cod_postal ," ",$municipio,", ",$ciudad,", ",$estado ?> </p>
+      </div>
+
+      <div class="item-compras">
+
+          <button class="btn editar"  onclick="location.href='http://localhost/artesanias_copia/editar_cuenta.php'">Editar informacion</button>
+          
+          <button class="btn carrito"  type="submit">Ir a mi carrito</button>
+
+          <button class="btn eliminar"  onclick="notificar(<?php echo $id ?>)">Eliminar cuenta</button>
+          
+            
+      </div>
+    
+    </div>
+
+  </div>
+
+  <?php
+  include("footer.php");
+  ?>
 </body>
 </html>

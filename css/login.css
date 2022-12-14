@@ -1,6 +1,7 @@
 
 .contenedor-login{
-  margin-top: 8rem;
+  margin-top: 9rem;
+  margin-bottom: 1.5rem;
   width:100%;
   height: min-content;
   text-align: center; 
@@ -88,6 +89,8 @@ a{
 }
 
 /* stylos de los inputs */
+
+
 .input-pass, .input-email {
   width: 20rem;
   height: 2.5rem;
@@ -139,5 +142,5 @@ a{
     margin: 1rem 0;
 }
 input{
-    margin-top: 1rem;
+    margin-top: .5rem;
 }   

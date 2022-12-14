@@ -4,7 +4,8 @@
   }
 ?>
 <head>
-<link rel="stylesheet" href="./css/styles2.css">
+<link rel="stylesheet" href="css/styles2.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <div class="menu">
       <img class="menu_logo" src="./img/logo.png" alt="">

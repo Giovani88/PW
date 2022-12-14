@@ -57,6 +57,7 @@ if(isset($_POST['enviar'])){
     
 }
 ?>
+
         <form action="" method="post">
             <div class="login__input">
                 <label for="email">Correo Electronico</label><br>
