@@ -1,0 +1,103 @@
+.body-cuenta{
+
+
+}
+
+.item-cuenta{grid-area: cuenta;
+width: 100%;}
+.item-compras{grid-area: compra; width: 100%; }
+
+.contenedor-micuenta{
+  margin: 13rem auto 5rem auto  ;
+  padding: .5rem;
+  width: 80%;
+  height: auto;
+  text-align: center;
+  background: #fff;
+  border-radius: 1rem;
+}
+
+.imagen-perfil{
+  width: 15rem;
+  height: 18rem;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.item-cuenta{
+  margin: 0px auto;
+  display: grid;
+  grid-template-areas: 'perfil perfil' 'img informacion' 'compra compra';
+  width: 100%;
+  justify-content: center;
+  
+}
+
+.item-compras{
+  padding: .5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.login__btn{
+    margin-top: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.editar{
+  background-color: #386641;
+}
+.eliminar{
+  background-color:#e05b5b;
+}
+.carrito{
+  background-color: #6A994E;
+}
+
+.btn{
+    color: white;
+    border-style: none;
+    width: 15rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    -webkit-box-shadow: 3px 8px 19px 3px rgba(0,0,0,0.3); 
+    box-shadow: 3px 8px 19px 3px rgba(0,0,0,0.3);
+}
+
+.btn:active{
+ transform: translateY(3px);
+}
+
+
+
+/* estilos de los objetos que estan en .item-cuenta */
+.titulo-perfil{
+  grid-area: perfil;
+
+}
+.contenedor-img{
+  grid-area: img;
+  padding: 1rem 0 0 0 ;
+}
+
+.contenedor-informacion{
+  grid-area: informacion;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-evenly;
+  padding: 1rem 0 0 0 ;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.contenedor-informacion p{
+  width: 100%;
+}
+
+
