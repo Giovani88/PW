@@ -23,7 +23,7 @@
 .item-categorias{
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 20rem;
   padding: .5rem 1rem;
 }
 
@@ -141,7 +141,7 @@
 .btn-categoria {
  color: #090909;
  height: 2rem;
- padding: 0.7em 1.7em;
+ /* padding: 0.7em 1.7em; */
  font-size: 13px;
  border-radius: .5rem;
  background: #e8e8e8;
@@ -149,6 +149,7 @@
  transition: all .3s;
  box-shadow: 6px 6px 12px #c5c5c5;
  margin: .2rem  0 .2rem 0;
+ font-size:16px;
 }
 
 .btn-categoria {
@@ -162,6 +163,10 @@
 }
 
 
+.btn-categoria:hover{
+  color: rgb(255, 255, 255);
+    background-color: rgb(106, 153, 78);
+}
 
 
 
@@ -172,4 +177,8 @@
 
 
 
+/*Hover
+      color: rgb(255, 255, 255);
+    background-color: rgb(106, 153, 78);
 
+*/

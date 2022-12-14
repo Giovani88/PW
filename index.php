@@ -8,11 +8,15 @@
   <script defer src="java.js"></script>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/alert.css">
+  <link rel="stylesheet" href="./css/artesanos.css">
 </head>
 
 <body>
 <?php
   include("nav.php");
+  require 'DBManager.php';
+  $artesanias = json_decode(artesanias(0,""));
+  $artesanos = json_decode(getArtesanos());
 ?>
   <section class="section">
       <div class="section-container">         
@@ -21,13 +25,12 @@
   </section>
   <script src="./js/database.js"></script>
   <script src="./js/script.js"></script>
-
+<!-- CATEGORIAS -->  
   <div class="contenedor-categorias">
-    <div class="contenedor-titulo">
       <h1 class="titulo" >Categorias</h1>
-    </div>
+    
     <div class="categorias">
-      <a href="login.html">
+      <a href="artesanias.php?categoria=Catrina">
         <div class="categoria">
           <div class="circulo">
             <img class="circulo-img" src="./img/categorias/catrinas.png" alt="">
@@ -38,7 +41,7 @@
         </div>
       </a>
 
-      <a href="login.html">
+      <a href="artesanias.php?categoria=Ropa">
         <div class="categoria">
           <div class="circulo">
             <img class="circulo-img" src="./img/categorias/camisa.png" alt="">
@@ -49,7 +52,7 @@
         </div>
       </a>
 
-      <a href="login.html">
+      <a href="artesanias.php?categoria=Alebrijes">
         <div class="categoria">
           <div class="circulo">
             <img class="circulo-img" src="./img/categorias/alebrijes.png" alt="">
@@ -60,7 +63,7 @@
         </div>
       </a>
 
-      <a href="login.html">
+      <a href="artesanias.php?categoria=Juguetes">
         <div class="categoria">
           <div class="circulo">
             <img class="circulo-img" src="./img/categorias/juguetes.png" alt="">
@@ -71,7 +74,7 @@
         </div>
       </a>
 
-      <a href="login.html">
+      <a href="artesanias.php?categoria=Jarrones">
         <div class="categoria">
           <div class="circulo">
             <img class="circulo-img" src="./img/categorias/jarron.png" alt="">
@@ -82,7 +85,7 @@
         </div>
       </a>
 
-      <a href="login.html">
+      <a href="artesanias.php?categoria=Joyeria">
         <div class="categoria">
           <div class="circulo">
             <img class="circulo-img" src="./img/categorias/joyeria.png" alt="">
@@ -93,7 +96,7 @@
         </div>
       </a>
 
-      <a href="login.html">
+      <a href="artesanias.php?categoria=Vajillas">
         <div class="categoria">
           <div class="circulo">
             <img class="circulo-img" src="./img/categorias/vajillas.png" alt="">
@@ -107,166 +110,58 @@
     </div>
   </div>
   
-  
+<!-- ARTESANIAS -->  
   <div class="contenedor">
+  <?php if($artesanias){?>
     <h1 class="titulo">Encuentra las artesanias que más te gusten</h1>
     <div class="contenedor__productos">
-
-      <div class="contenedor__producto">
-        <a href="producto.php">
-          <div class="contenedor__imagen">
-            <img src="./img/guanengo.png" alt="Producto">
-          </div>
-        </a>
-          <div class="contenedor__desc">
-              <p id="desc">Guanengo</p>
-              <p id="precio">$1,500.07</p>
-          </div>
-        
-        <div class="contenedor__btn">
-            <button>Agregar al carrito</button>
-        </div>     
-      </div>
-      <div class="contenedor__producto">
-        <div class="contenedor__imagen">
-            <img src="./img/frida.jpg" alt="Producto">
+        <?php foreach($artesanias as $artesania) { ?>
+         <a href="producto.php?id=<?php echo $artesania->id_artesania?>" target="_self">
+          <form action="agregarCarrito.php" method="POST" class="contenedor__producto">
+              <input type="hidden" name="id_artesania" value="<?php echo $artesania->id_artesania?>">
+              <div class="contenedor__imagen">
+                  <img src="./img/artesanias/<?php echo $artesania->imagen?>" alt="Producto">
+              </div>
+              <div class="contenedor__desc">
+                    <p id="desc"><?php echo $artesania->nombre ?></p>
+                    <p id="precio">$<?php echo $artesania->precio ?> MX</p>
+              </div>
+              <div class="contenedor__btn">
+                  <button>Agregar al carrito</button>
+              </div>    
+          </form> 
+          </a>
+        <?php } ?>
+        <?php }else{
+          echo '<h3>Artesania no disponible</h3>';
+        } ?>
         </div>
-        <div class="contenedor__desc">
-            <p id="desc">Craneo Frida Kahlo</p>
-            <p id="precio">$1,221.07</p>
-        </div>
-        <div class="contenedor__btn">
-            <button>Agregar al carrito</button>
-        </div>
-        
-      </div>
-      <div class="contenedor__producto">
-
-          <div class="contenedor__imagen">
-              <img src="./img/catrina.png" alt="Producto">
-          </div>
-          <div class="contenedor__desc">
-              <p id="desc">Catrina con calabazas</p>
-              <p id="precio">$1,221.07</p>
-          </div>
-        <div class="contenedor__btn">
-            <button>Agregar al carrito</button>
-        </div>
-        
-      </div>
-      <div class="contenedor__producto">
-        <div class="contenedor__imagen">
-            <img src="./img/catrina.png" alt="Producto">
-        </div>
-        <div class="contenedor__desc">
-            <p id="desc">Catrina con calabazas</p>
-            <p id="precio">$1,221.07</p>
-        </div>
-        <div class="contenedor__btn">
-            <button>Agregar al carrito</button>
-        </div>
-        
-      </div>
-      <div class="contenedor__producto">
-        <div class="contenedor__imagen">
-            <img src="./img/catrina.png" alt="Producto">
-        </div>
-        <div class="contenedor__desc">
-            <p id="desc">Catrina con calabazas</p>
-            <p id="precio">$1,221.07</p>
-        </div>
-        <div class="contenedor__btn">
-            <button>Agregar al carrito</button>
-        </div>
-        
-      </div>
-      <div class="contenedor__producto">
-        <div class="contenedor__imagen">
-            <img src="./img/9.png" alt="Producto">
-        </div>
-        <div class="contenedor__desc">
-            <p id="desc">Batea redonda Janitzio</p>
-            <p id="precio">$755.18</p>
-        </div>
-        <div class="contenedor__btn">
-            <button>Agregar al carrito</button>
-        </div>
-      </div>
     </div>
-  </div>
-  <div class="contenedor">
+  </div> 
+ <!-- ARTESANOS -->
+  <div class="contenedor__artesanos">
+  <?php if($artesanos){?>
     <h1 class="titulo">Conoce a nuestros artesanos</h1>
-    <div class="contenedor__productos">
-
-      <div class="contenedor__producto">
-        <div class="contenedor__imagen--artesano">
-            <img src="./img/artesanos/artesano.png" alt="Producto">
-        </div>
-        <div class="contenedor__desc">
-            <p id="nombre"> Fabian GilbertoMartínez</p>
-
-        </div>
-        <div class="contenedor__btn">
-            <button>Conocer más</button>
-        </div>
-        
-      </div>
-      <div class="contenedor__producto">
-        <div class="contenedor__imagen--artesano">
-            <img src="./img/artesanos/artesano2.png" alt="Producto">
-        </div>
-        <div class="contenedor__desc">
-            <p id="nombre">José Alfonso Soteno Fernández</p>
-            
-        </div>
-        <div class="contenedor__btn">
-            <button>Conocer más</button>
-        </div>
-        
-      </div>
-
-      <div class="contenedor__producto">
-        <div class="contenedor__imagen--artesano">
-            <img src="./img/artesanos/artesano3.png" alt="Producto">
-        </div>
-        <div class="contenedor__desc">
-            <p id="nombre">Irene Aguilar Alcántara</p>
-        </div>
-        <div class="contenedor__btn">
-            <button>Conocer más</button>
-        </div>
-      </div>
-
-      <div class="contenedor__producto">
-        <div class="contenedor__imagen--artesano">
-            <img src="./img/artesanos/artesano3.png" alt="Producto">
-        </div>
-        <div class="contenedor__desc">
-            <p id="nombre">Irene Aguilar Alcántara</p>
-        </div>
-        <div class="contenedor__btn">
-            <button>Conocer más</button>
-        </div>
-      </div>
-
-      <div class="contenedor__producto">
-        <div class="contenedor__imagen--artesano">
-            <img src="./img/artesanos/artesano3.png" alt="Producto">
-        </div>
-        <div class="contenedor__desc">
-            <p id="nombre">Irene Aguilar Alcántara</p>
-        </div>
-        <div class="contenedor__btn">
-            <button>Conocer más</button>
-        </div>
-      </div>     
-  </div>
+       <?php foreach($artesanos as $artesano){?>
+        <a class='url' href=artesano.php?id=<?php echo $artesano->id_artesano?>>
+            <div class='contenedor__artesano'>
+                <div class='contenedor__imagen--artesano'>
+                    <img src='./img/artesanos/<?php echo $artesano->imagen?>' alt='artesano'>
+                </div>
+                <div class='contenedor__desc'>
+                    <p id='nombre'><?php echo $artesano->nombre?></p>            
+                </div>
+                <div class='contenedor__btn'>
+                    <button>Conocer más</button>
+                </div> 
+            </div>
+        </a>
+  <?php }?>
+  <?php }?>
   </div>
 
 <?php
   include("footer.php");
-
 ?>
-
 </body>
 </php>
