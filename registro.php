@@ -38,6 +38,7 @@ if (isset($_POST['enviar'])) {
     $insert = mysqli_query($con, $query) or die(mysqli_error());
     if($insert){
       echo 'Registrado con exito';
+    header('Location: login.php');
     }else{
       echo 'Error';
     }
@@ -90,7 +91,7 @@ if (isset($_POST['enviar'])) {
             <input type="checkbox" class="checkbox" required> <a href="#">Acepto términos y condiciones</a>
             <div class="container-botones">
               <div class="btn-cancelar">
-                <button class="cancelar">Cancelar</button>
+                <a href="index.php" class="cancelar">Cancelar</a>
               </div>
               <div class="btn-enviar">
                 <button class="enviar" name="enviar" type="submit">Enviar</button>

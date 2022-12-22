@@ -62,7 +62,7 @@
           <!-- <button class="btn editar"  onclick="location.href='http://localhost/artesanias_copia/editar_cuenta.php'">Editar informacion</button> -->
           <a class="btn editar" href="editar_Cuenta.php">Editar informacion</a>
           
-          <a class="btn carrito"  href="compras.php">Ir a mi carrito</a>
+          <a class="btn carrito"  href="compras.php">Ver mis compras</a>
 
           <button class="btn eliminar"  onclick="notificar(<?php echo $id ?>)">Eliminar cuenta</button>
           
